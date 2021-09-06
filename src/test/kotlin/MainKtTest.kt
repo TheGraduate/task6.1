@@ -33,16 +33,16 @@ class MainKtTest {
 
         //act
         val postTestTemp = WallService.add(postTest)
-        val result = postTestTemp.id
+        val expected = postTest.copy(id=1)
 
         //assert
-        assertNotEquals(0, result)
+        assertEquals(expected, postTestTemp)
     }
 
     @Test
     fun update_return_true() {
         //arrange
-        val postTest = Post(24,
+        val postTest = Post(1,
             5,
             1,
             12,
@@ -69,7 +69,8 @@ class MainKtTest {
         )
 
         //act
-        val result = WallService.update(1)
+        val result = WallService.update(postTest)
+
 
         //assert
         assertTrue(result)
@@ -105,7 +106,7 @@ class MainKtTest {
         )
 
         //act
-        val result = WallService.update(2)
+        val result = WallService.update(postTest)
 
         //assert
         assertFalse(result)
