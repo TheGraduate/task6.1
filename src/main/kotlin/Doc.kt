@@ -1,7 +1,7 @@
-data class Doc (
-    override val id: Int,
-    override val ownerId: Int,
-    val title: String,
-    val size: Int,
-    val ext: String
-): Attachment (id, ownerId)
+data class Doc(
+    val id: Int = 1,
+    val ownerId: Int = 1,
+    val title: String = "1",
+    val size: Int = 1,
+    val ext: String = "1"
+)
