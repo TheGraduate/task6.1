@@ -1,7 +1,7 @@
-data class Video (
-    override val id: Int,
-    override val ownerId: Int,
-    val videoTitle: Int,
-    val videoDescription: String,
-    val videoDuration: Int,
-): Attachment (id, ownerId)
+data class Video(
+    val id: Int = 1,
+    val ownerId: Int = 1,
+    val videoTitle: Int = 1,
+    val videoDescription: String = "1",
+    val videoDuration: Int = 1
+)

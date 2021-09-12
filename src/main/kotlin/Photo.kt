@@ -1,7 +1,7 @@
 data class Photo(
-     override val id: Int,
-     override val ownerId: Int,
-     val albumId: Int,
-     val text: String,
-     val date: Int
-): Attachment (id, ownerId)
+    val id: Int = 1,
+    val ownerId: Int = 1,
+    val albumId: Int = 1,
+    val text: String = "1",
+    val date: Int = 1
+)
