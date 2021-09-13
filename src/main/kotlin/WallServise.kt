@@ -28,6 +28,6 @@ object WallService {
                 return
             }
         }
-        throw Exception("PostNotFoundException")
+        throw PostNotFoundException()
     }
 }

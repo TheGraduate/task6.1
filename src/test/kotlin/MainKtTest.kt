@@ -166,7 +166,7 @@ class MainKtTest {
         assertEquals(Unit, testCreateComment)
     }
 
-    @Test (expected = Exception::class)
+    @Test (expected = PostNotFoundException::class)
     fun should_throw_createComment() {
         val commentTest = Comment(1,5,3,"4",5,6,7)
         WallService.createComment(commentTest)
