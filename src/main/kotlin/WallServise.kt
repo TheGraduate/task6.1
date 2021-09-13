@@ -1,10 +1,12 @@
+import java.lang.Exception
 
 object WallService {
-    var posts = emptyArray<Post>()
-    private var counter = 1
+    private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comment>()
+    private var counterUnicId = 1
 
     fun add(post: Post): Post {
-        val postWithUnicId = post.copy(id = counter++)
+        val postWithUnicId = post.copy(id = counterUnicId++)
         posts += postWithUnicId
         return posts.last()
     }
@@ -17,5 +19,15 @@ object WallService {
             }
         }
         return false
+    }
+
+    fun createComment (comment: Comment) {
+        for (count in posts) {
+            if (count.id == comment.postId ) {
+                comments += comment
+                return
+            }
+        }
+        throw Exception("PostNotFoundException")
     }
 }

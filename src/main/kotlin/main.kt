@@ -30,7 +30,7 @@ fun main() {
         1
     )
 
-    val post2 =  Post(1,
+    val post2 =  Post(2,
         5,
         1,
         12,
@@ -59,5 +59,30 @@ fun main() {
         donut = Donut(true,2,true,true,"5"),
         1
     )
+    val comment1 = Comment(
+        1,
+        1,
+        3,
+        "4",
+        4,
+        1,
+        1
+    )
+
+    val comment2 = Comment(
+        2,
+        2,
+        5,
+        "3",
+        4,
+        6,
+        4
+    )
+
+    //WallService.add(post1)
+    //WallService.add(post2)
+    //WallService.update(post1)
+    //WallService.createComment(comment1)
+    //WallService.createComment(comment2)
 }
 

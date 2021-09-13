@@ -1,4 +1,4 @@
 data class VideoAttachment (
-   // override val type: String = "video",
+    override val type: String = "video",
     val video: Video = Video()
-)//: Attachment
+): Attachment
